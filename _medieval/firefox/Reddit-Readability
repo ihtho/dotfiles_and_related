@@ -229,9 +229,10 @@ header-bottom-right {
 .commentarea .RES-keyNav-activeElement .md,
 .commentarea .RES-keyNav-activeElement.entry .noncollapsed {
   background-color: #D6DDF5 !important;
+	
+}
+.choice {
+	visibility: hidden;
 }
 
-.share, .save-button, .hide-button, .report-button, .redditSingleClick, .post-crosspost-button, .beta-link, .choice.pref-lang, .separator:nth-of-type(5), .separator:nth-of-type(4), .separator:nth-of-type(7), .modmail.access-required.nohavemail, .nohavemail access-required, .openRESPrefs, .res-toggle-filterline-visibility  {
-    display: none !important;
-}
 }
