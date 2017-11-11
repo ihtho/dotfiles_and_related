@@ -28,7 +28,7 @@ hc keybind $Mod-Shift-c quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-q close
 hc keybind $Mod-Return spawn xfce4-terminal
-hc keybind $Mod-d spawn rofi -show run -terminal termite -lines 3 -eh 2 -opacity "25" -width "60" -padding "50" -bw 0 -color-window "#dfd6fc, #b39bfc, argb:24000000" -color-normal "#dfd6fc, #8f7cc9, #dfd6fc, #b39bfc, #dfd6fc" -color-active "#dfd6fc, #8f7cc9, #ffffff, #b39bfc, #dfd6fc" -color-urgent "#dfd6fc, #8f7cc9, #dfd6fc, #b39bfc, #dfd6fc" -font "Source Code Pro 24"
+hc keybind $Mod-d spawn rofi -show run -color-enabled -bw 5  -terminal termite -lines 5 -eh 2 -opacity "25" -width "60" -padding "50" -bw 0 -color-window "#1A3578, #574B3F, argb:24000000" -color-normal "#475D93, #E5E5E5, #475D93, #475D93, #BCB0A6" -color-active "#dfd6fc, #8f7cc9, #ffffff, #b39bfc, #dfd6fc" -color-urgent "#dfd6fc, #8f7cc9, #dfd6fc, #b39bfc, #dfd6fc" -font "Source Code Pro 24"
 hc keybind $Mod-Shift-d spawn xfce4-appfinder
 hc keybind Print spawn xfce4-screenshooter
 
