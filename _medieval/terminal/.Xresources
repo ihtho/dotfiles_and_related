@@ -3,16 +3,16 @@ URxvt.scrollBar: false
 URxvt.scrollstyle: plain
 
 ! font
-URxvt.font: xft:hack:size=10
+URxvt.font: xft:hack:size=9
 
 ! special
-URxvt.foreground:   #1A0F09
-URxvt.background:   #FFFFFF
-URxvt.cursorColor:  #1A3ED0
+URxvt.foreground:   #eeeeec
+URxvt.background:   #233581
+URxvt.cursorColor:  #eeeeec
 
 ! black
 URxvt.color0:       #ffff00
-URxvt.color8:       #1a3ed0
+URxvt.color8:       #1ad0ac
 
 ! red
 URxvt.color1:       #dc1c1c
@@ -40,4 +40,4 @@ URxvt.color14:      #1fad83
 
 ! white
 URxvt.color7:       #8c8040
-URxvt.color15:      #2c75c1
+URxvt.color15:      #2cc1b8

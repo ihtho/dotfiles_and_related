@@ -7,9 +7,10 @@ hc() {
 }
 
 hc emit_hook reloadQ
+mpdas & 
 xrandr --dpi 122 &
 compton & 
-#redshift &
+redshift &
 xscreensaver &
 nitrogen --restore &
 export LANG=de_DE.utf8
