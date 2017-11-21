@@ -5,6 +5,9 @@ URxvt.scrollstyle: plain
 ! font
 URxvt.font: xft:hack:size=9
 
+! Icon
+URxvt.iconFile: /usr/share/icons/Arc/panel/22/indicator-keyboard.svg
+
 ! special
 URxvt.foreground:   #eeeeec
 URxvt.background:   #233581
@@ -39,5 +42,5 @@ URxvt.color6:       #1fad83
 URxvt.color14:      #1fad83
 
 ! white
-URxvt.color7:       #8c8040
+URxvt.color7:       #84c6c5
 URxvt.color15:      #2cc1b8
