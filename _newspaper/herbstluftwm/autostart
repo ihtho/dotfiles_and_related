@@ -6,13 +6,13 @@ hc() {
     herbstclient "$@"
 }
 
-hc emit_hook reload
-mpdas & 
+hc emit_hook reloadQ
 xrandr --dpi 122 &
 compton & 
-redshift &
+#redshift &
 xscreensaver &
 nitrogen --restore &
+quiterss &
 export LANG=de_DE.utf8
 
 
@@ -73,12 +73,12 @@ hc keybind $Mod-Control-Up      resize up +$resizestep
 hc keybind $Mod-Control-Right   resize right +$resizestep
 
 # tags
-tag_names=( {1..6}0 )
-tag_keys=( {1..6} 0 )
+tag_names=({2..9} )
+tag_keys=({1..10} )
 
-hc rename default "${tag_names[0]}" || true
+hc rename default "   Frontpage   " || true
 for i in ${!tag_names[@]} ; do
-    hc add "${tag_names[$i]}"
+    hc add "Page ${tag_names[$i]}"
     key="${tag_keys[$i]}"
     if ! [ -z "$key" ] ; then
         hc keybind "$Mod-$key" use_index "$i"
@@ -124,21 +124,21 @@ hc set frame_bg_transparent 1
 hc set frame_transparent_width 0
 hc set frame_gap 7.5
 
-hc attr theme.active.color '#312C19'
-hc attr theme.normal.color '#312C19'
+hc attr theme.active.color '#727272'
+hc attr theme.normal.color '#727272'
 hc attr theme.urgent.color orange
 hc attr theme.inner_width 0
 hc attr theme.inner_color black
-hc attr theme.border_width 1
-hc attr theme.floating.border_width 0
-hc attr theme.floating.outer_width 0
+hc attr theme.border_width 2
+hc attr theme.floating.border_width 1
+hc attr theme.floating.outer_width 1
 hc attr theme.floating.outer_color black
-hc attr theme.active.inner_color '#000000'
-hc attr theme.active.outer_color '#000000'
-hc attr theme.background_color '#000000'
+hc attr theme.active.inner_color '#727272'
+hc attr theme.active.outer_color '#727272'
+hc attr theme.background_color '#727272'
 
-hc set window_gap 15
-hc set frame_padding 85
+hc set window_gap 20
+hc set frame_padding -10
 hc set smart_window_surroundings 0
 hc set smart_frame_surroundings 0
 hc set mouse_recenter_gap 0
@@ -169,9 +169,9 @@ herbstclient set tree_style '╾│ ├└╼─┐'
 {
     pids=( )
     # reserve some space for the panel on monitor 0
-    hc pad 0 -23 90 105 95
+    hc pad 0 100 25 0
     # start the panel itself and remember its pid
-    tint2 &
+    xfce4-panel &
     pids+=( $! )
     # or start another panel:
     # mypanel &
