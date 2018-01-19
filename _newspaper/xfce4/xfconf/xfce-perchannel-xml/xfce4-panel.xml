@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-panel" version="1.0">
+  <property name="configver" type="int" value="2"/>
+  <property name="panels" type="array">
+    <value type="int" value="1"/>
+    <value type="int" value="2"/>
+    <property name="panel-1" type="empty">
+      <property name="position" type="string" value="p=4;x=1906;y=585"/>
+      <property name="size" type="uint" value="25"/>
+      <property name="length" type="uint" value="90"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="3"/>
+      </property>
+      <property name="background-style" type="uint" value="1"/>
+      <property name="background-color" type="array">
+        <value type="uint" value="65535"/>
+        <value type="uint" value="65535"/>
+        <value type="uint" value="65535"/>
+        <value type="uint" value="65535"/>
+      </property>
+      <property name="length-adjust" type="bool" value="false"/>
+      <property name="nrows" type="uint" value="1"/>
+      <property name="mode" type="uint" value="1"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="disable-struts" type="bool" value="true"/>
+      <property name="autohide-behavior" type="uint" value="0"/>
+    </property>
+    <property name="panel-2" type="empty">
+      <property name="position" type="string" value="p=0;x=1724;y=82"/>
+      <property name="background-style" type="uint" value="1"/>
+      <property name="background-color" type="array">
+        <value type="uint" value="65535"/>
+        <value type="uint" value="65535"/>
+        <value type="uint" value="65535"/>
+        <value type="uint" value="65535"/>
+      </property>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="1"/>
+      </property>
+      <property name="disable-struts" type="bool" value="false"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="size" type="uint" value="35"/>
+      <property name="length-adjust" type="bool" value="true"/>
+      <property name="length" type="uint" value="9"/>
+    </property>
+  </property>
+  <property name="plugins" type="empty">
+    <property name="plugin-3" type="string" value="pager">
+      <property name="rows" type="uint" value="1"/>
+      <property name="miniature-view" type="bool" value="false"/>
+      <property name="workspace-scrolling" type="bool" value="true"/>
+    </property>
+    <property name="plugin-1" type="string" value="xfce4-orageclock-plugin"/>
+    <property name="notes" type="empty">
+      <property name="global" type="empty">
+        <property name="background-color" type="string" value="#fbfbfbfbfbfb"/>
+        <property name="tabs-position" type="int" value="0"/>
+        <property name="skip-taskbar-hint" type="bool" value="false"/>
+        <property name="font-description" type="string" value="Belgrano 12"/>
+      </property>
+      <property name="new-window" type="empty">
+        <property name="sticky" type="bool" value="false"/>
+      </property>
+    </property>
+  </property>
+</channel>

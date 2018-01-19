@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-notifyd" version="1.0">
+  <property name="applications" type="empty">
+    <property name="known_applications" type="array">
+      <value type="string" value="Electron"/>
+      <value type="string" value="Firefox"/>
+      <value type="string" value="notify-send"/>
+      <value type="string" value="org.kdenlive.kdenlive"/>
+      <value type="string" value="Orion"/>
+      <value type="string" value="Thunderbird"/>
+    </property>
+  </property>
+</channel>

@@ -6,10 +6,11 @@ hc() {
     herbstclient "$@"
 }
 
-hc emit_hook reloadQ
+hc emit_hook reload &
 xrandr --dpi 122 &
 compton & 
-#redshift &
+mpdas & 
+redshift &
 xscreensaver &
 nitrogen --restore &
 quiterss &
@@ -29,7 +30,7 @@ hc keybind $Mod-Shift-c quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-q close
 hc keybind $Mod-Return spawn urxvt
-hc keybind $Mod-d spawn rofi -show run -color-enabled -bw 5  -terminal termite -lines 5 -eh 2 -opacity "25" -width "60" -padding "50" -bw 0 -color-window "#1A3578, #574B3F, argb:24000000" -color-normal "#475D93, #E5E5E5, #475D93, #475D93, #BCB0A6" -color-active "#dfd6fc, #8f7cc9, #ffffff, #b39bfc, #dfd6fc" -color-urgent "#dfd6fc, #8f7cc9, #dfd6fc, #b39bfc, #dfd6fc" -font "Source Code Pro 24"
+hc keybind $Mod-d spawn rofi -show run -display-run 'Artikel' -color-enabled -bw 5  -terminal termite -lines 5 -eh 2 -opacity "25" -width "60" -padding "50" -bw 0 -color-window "#151515, #FBFBFB, argb:24000000" -color-normal "#d0d0d0, #FBFBFB, #d0d0d0, #151515, #d0d0d0" -font "Brawler Regular 22"
 hc keybind $Mod-Shift-d spawn xfce4-appfinder
 hc keybind Print spawn xfce4-screenshooter
 
@@ -74,11 +75,11 @@ hc keybind $Mod-Control-Right   resize right +$resizestep
 
 # tags
 tag_names=({2..9} )
-tag_keys=({1..10} )
+tag_keys=({1..9} )
 
-hc rename default "   Frontpage   " || true
+hc rename default "   Titelseite   " || true
 for i in ${!tag_names[@]} ; do
-    hc add "Page ${tag_names[$i]}"
+    hc add "Seite ${tag_names[$i]}"
     key="${tag_keys[$i]}"
     if ! [ -z "$key" ] ; then
         hc keybind "$Mod-$key" use_index "$i"
@@ -114,28 +115,28 @@ hc keybind $Mod-i jumpto urgent
 # theme
 hc attr theme.tiling.reset 0
 hc attr theme.floating.reset 0
-hc set frame_border_active_color '#222222'
-hc set frame_border_normal_color '#101010'
-hc set frame_bg_normal_color '#565656'
-hc set frame_bg_active_color '#345F0C'
+hc set frame_border_active_color '#151515'
+hc set frame_border_normal_color '#151515'
+hc set frame_bg_normal_color '#151515'
+hc set frame_bg_active_color '#151515'
 hc set frame_border_width 0
 hc set always_show_frame 0
 hc set frame_bg_transparent 1
 hc set frame_transparent_width 0
 hc set frame_gap 7.5
 
-hc attr theme.active.color '#727272'
-hc attr theme.normal.color '#727272'
+hc attr theme.active.color '#151515'
+hc attr theme.normal.color '#151515'
 hc attr theme.urgent.color orange
 hc attr theme.inner_width 0
 hc attr theme.inner_color black
-hc attr theme.border_width 2
+hc attr theme.border_width 3
 hc attr theme.floating.border_width 1
 hc attr theme.floating.outer_width 1
 hc attr theme.floating.outer_color black
-hc attr theme.active.inner_color '#727272'
-hc attr theme.active.outer_color '#727272'
-hc attr theme.background_color '#727272'
+hc attr theme.active.inner_color '#151515'
+hc attr theme.active.outer_color '#151515'
+hc attr theme.background_color '#151515'
 
 hc set window_gap 20
 hc set frame_padding -10
@@ -172,6 +173,7 @@ herbstclient set tree_style '╾│ ├└╼─┐'
     hc pad 0 100 25 0
     # start the panel itself and remember its pid
     xfce4-panel &
+    tint2
     pids+=( $! )
     # or start another panel:
     # mypanel &
