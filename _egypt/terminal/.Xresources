@@ -1,0 +1,46 @@
+!
+URxvt.scrollBar: false
+URxvt.scrollstyle: plain
+
+! font
+URxvt.font: xft:hack:size=9
+
+! Icon
+URxvt.iconFile: /usr/share/icons/Arc/panel/22/indicator-keyboard.svg
+
+! special
+URxvt.foreground:   #eeeeec
+URxvt.background:   #233581
+URxvt.cursorColor:  #eeeeec
+
+! black
+URxvt.color0:       #ffff00
+URxvt.color8:       #1ad0ac
+
+! red
+URxvt.color1:       #dc1c1c
+URxvt.color9:       #d73737
+
+! green
+URxvt.color2:       #49b312
+URxvt.color10:      #429616
+
+! yellow
+URxvt.color3:       #f04a03
+URxvt.color11:      #cfb017
+
+! blue
+URxvt.color4:       #3e63d5
+URxvt.color12:      #ffffff
+
+! magenta
+URxvt.color5:       #b854d4
+URxvt.color13:      #b854d4
+
+! cyan
+URxvt.color6:       #1fad83
+URxvt.color14:      #1fad83
+
+! white
+URxvt.color7:       #84c6c5
+URxvt.color15:      #2cc1b8
