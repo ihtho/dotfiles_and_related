@@ -1,0 +1,238 @@
+/*
+Only this line is needed in Stylish instead of the individual @font-face rules:
+
+@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700italic,400italic,700);
+
+Unfortunately, userstyles.org won't let you save a style with @import!
+*/
+
+@-moz-document domain("reddit.com") {
+
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Merriweather Sans'), local('MerriweatherSans-Regular'), url(https://fonts.gstatic.com/s/merriweathersans/v5/AKu1CjQ4qnV8MUltkAX3sMZ4HySTEWshgORbPp2tk8k.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Merriweather Sans Bold'), local('MerriweatherSans-Bold'), url(https://fonts.gstatic.com/s/merriweathersans/v5/6LmGj5dOJopQKEkt88GowbvMLSVzqOGkoxdgTSsKqWM.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Merriweather Sans Italic'), local('MerriweatherSans-Italic'), url(https://fonts.gstatic.com/s/merriweathersans/v5/3Mz4hOHzs2npRMG3B1ascefU2ka509O1odprhyXBUMU.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Merriweather Sans Bold Italic'), local('MerriweatherSans-BoldItalic'), url(https://fonts.gstatic.com/s/merriweathersans/v5/nAqt4hiqwq3tzCecpgPmVafo0sDQ75c9ExQ-26lwTdA.woff2) format('woff2');
+}
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+  word-spacing: normal !important;
+  letter-spacing: normal !important;
+}
+
+body,
+p {
+  font-family: 'Merriweather Sans', sans-serif !important;
+  color: black !important;
+}
+
+
+/*** Link colours ***/
+
+/*.md a,
+.tagline a,
+.entry .buttons li a*/
+.entry a {
+  color: #2F3E83 !important;
+}
+
+.entry a:visited {
+  color: #AB595B !important;
+}
+
+.title {
+  color: #151515 !important;
+  font-weight: bold !important;
+}
+
+
+/*** Font sizes ***/
+
+/*.entry,
+.comment,
+div.md p,*/
+.md .-text,
+.md li,
+.md p,
+.md pre > code,
+.md textarea,
+.md td,
+.md th {
+  font-size: 14pt !important;
+}
+
+.tabmenu,
+.menuarea,
+.morecomments a {
+  font-size: 12pt !important;
+}
+
+.tagline,
+.entry .buttons li a,
+.entry .buttons li .redditSingleClick {
+  font-size: 11pt !important;
+}
+
+.domain {
+  font-size: 9pt !important;
+}
+
+
+/*** Subreddit styling ***/
+
+.linklisting .link {
+  margin-bottom: 5px !important;
+  padding: 5px 10px !important;
+}
+
+.entry p.title {
+  margin-bottom: 6px !important;
+  border-bottom: solid 1.5px #434343 !important;
+  }
+
+.entry p.title a.title {
+  color: #4A517B !important;
+}
+
+.entry .tagline,
+.entry .flat-list.buttons {
+  height: 20px !important;
+  line-height: 20px !important;
+  padding-top: 0px !important;
+  margin: 2px 0 4px !important;
+}
+
+.link .entry .tagline {
+  float: left !important;
+}
+
+.link .entry .flat-list.buttons {
+  float: right !important;
+}
+
+.link .entry .buttons li a,
+.link .entry .buttons li .redditSingleClick {
+  font-size: 8pt !important;
+  padding: 2px 4px !important;
+  border-radius: 4px !important;
+  color: #4A517B !important;
+  background-color: #ffffff !important;
+  border: solid 1px #ffffff !important;
+/*   font-weight: normal !important; */
+}
+
+  
+/*** Comment styling ***/
+
+.comment .tagline {
+  display: inline-block !important;
+  padding-bottom: 4px !important;
+  border-bottom: dotted 1px #929BC3 !important;
+  font-size: 12pt !important;
+}
+
+.comment .flat-list.buttons {
+  margin: 8px 0 2px !important;
+}
+
+.comment .entry .buttons li a,
+.comment .entry .buttons li .redditSingleClick {
+  color: #929BC3 !important;
+}
+
+.comment .tagline,
+.md,
+.flat-list {
+  padding-left: 2px !important;
+}
+
+.flat-list {
+  padding-top: 8px !important;
+}
+
+.edited-timestamp {
+  overflow: hidden !important;
+  text-indent: -10000px !important;
+}
+.edited-timestamp:before {
+  display: inline-block !important;
+  content: "2020" !important;
+  color: black !important;
+  font-size: medium !important;
+}
+
+/* Hide popups on up/down arrows */
+.arrow:before {
+  display: none !important;
+}
+
+
+/*** Editor/live preview ***/
+
+.usertext-edit textarea,
+.livePreview {
+  padding: 1px 4px;
+}
+
+.livePreview .md {
+  padding-bottom: 0 !important;
+}
+
+
+/*** RES styling ***/
+
+/* RES shortcut bar and header */
+sr-header-area {
+  height: auto !important;
+}
+
+sr-header-area a {
+  font-size: 10pt !important;
+}
+
+RESShortcutsViewport {
+  max-height: 100% !important;
+  overflow-y: visible !important;
+}
+
+header-bottom-right {
+  top: 28px !important;
+}
+
+/* Keyboard focus */
+.RES-keyNav-activeElement {
+  border-right: solid #2F3E83 2px !important;
+  }
+  
+.RES-keyNav-activeElement,
+.commentarea .RES-keyNav-activeElement .md,
+.commentarea .RES-keyNav-activeElement.entry .noncollapsed {
+  background-color: #D6DDF5 !important;
+	
+}
+.choice {
+	visibility: hidden;
+}
+
+}

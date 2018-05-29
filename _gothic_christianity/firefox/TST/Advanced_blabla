@@ -1,0 +1,31 @@
+.tab:not(:hover) .closebox {
+  display: none;
+}
+
+:root {
+  --tab-height: 25px !important;
+}
+.tab {
+  height: var(--tab-height) !important;
+}
+
+#tabbar:not(.overflow) .after-tabs {
+  display: none;
+}
+#tabbar:not(.overflow) ~ .after-tabs {
+  display: block;
+}
+
+#tabbar { 
+  overflow-y: scroll;
+}
+
+:root.left #tabbar,
+#tabContextMenu,
+#tabContextMenu ul {
+  margin-left: -15px;
+}
+
+:root.right #tabbar {
+  margin-right: -15px;
+}
